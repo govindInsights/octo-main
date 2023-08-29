@@ -1,0 +1,45 @@
+{"flow":[
+      {
+        "flowCode": "VALIDATE_BILLING_ITEM",
+        "flowStep": [
+          {
+            "sequence": 1,
+            "implementationClass": "A"
+          },
+          {
+            "sequence": 2,
+            "implementationClass": "B"
+          },
+          {
+            "sequence": 3,
+            "implementationClass": "C"
+          },
+          {
+            "sequence": 4,
+            "implementationClass": "D"
+          }
+        ]
+      },
+      {
+        "flowCode": "PROCESS_BILLING_ITEM",
+        "flowStep": [
+          {
+            "sequence": 1,
+            "implementationClass": "A"
+          },
+          {
+            "sequence": 2,
+            "implementationClass": "B"
+          },
+          {
+            "sequence": 3,
+            "implementationClass": "C"
+          },
+          {
+            "sequence": 4,
+            "implementationClass": "D"
+          }
+        ]
+      }
+    ]
+}

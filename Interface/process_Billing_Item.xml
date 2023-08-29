@@ -1,0 +1,33 @@
+<voyage>
+	<channel>TERMINAL</channel>
+	<eventCode>ADD_BILLING_ITEM</eventCode>
+	
+	<customer>
+		<company>
+			<fullName>Port Company</fullName>
+			<displayName>Port Company</displayName>
+			<currency>AED</currency>
+			<primaryContactName>Mr.X</primaryContactName>
+			<contactEmail>x@company.ae</contactEmail>
+			<contactMobile>97142000000</contactMobile>
+			<address>1st Street, Dubai</address>
+			<billingAddress>1st Street, Dubai</billingAddress>
+			<shippingAddress>1st Street, Dubai</shippingAddress>
+			<notes>x</notes>
+		</company>
+	</customer>
+	
+	
+	
+	<billingItem>
+		<chargeType>Vessel_Handling</chargeType>
+		
+		<vesselType>CARGO / NON_CARGO</vesselType>
+		<portCode>ADPORT</portCode>
+		<requestType> Shifting Request / Channel Transit</requestType>
+		<startDateTime>2023-08-29T10:15:30Z</startDateTime>
+		<endDateTime>2023-08-29T11:15:30Z</endDateTime>
+		
+		<vesselReferenceId></vesselReferenceId>
+	</billingItem>
+</voyage>
