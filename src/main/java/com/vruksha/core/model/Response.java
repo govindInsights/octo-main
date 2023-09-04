@@ -1,12 +1,14 @@
 package com.vruksha.core.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Response {
 
 	private String status;
 	private Date responseTime;
 	private String description;
+	private List<? extends Exposer> exposer;
 	
 	public Response() {
 		this.responseTime = new Date();
@@ -37,6 +39,13 @@ public class Response {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public List<? extends Exposer> getExposer() {
+		return exposer;
+	}
+	public void setExposer(List<? extends Exposer> exposer) {
+		this.exposer = exposer;
+	}
+	
 	
 	
 }
