@@ -1,9 +1,12 @@
 package com.vruksha.core.model;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 
-import org.springframework.boot.jackson.JsonComponent;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "voyage")
 public class Voyage {
@@ -11,7 +14,8 @@ public class Voyage {
     private String channel;
     private String eventCode;
     private Customer customer;
-    private BillingItem billingItem;
+    
+    private ArrayList<BillingItem> billingItems;
 
     public String getChannel() {
         return channel;
@@ -40,13 +44,14 @@ public class Voyage {
         this.customer = customer;
     }
 
-    public BillingItem getBillingItem() {
-        return billingItem;
+    public ArrayList<BillingItem> getBillingItems() {
+        return billingItems;
     }
 
+    @XmlElementWrapper
     @XmlElement(name = "billingItem")
-    public void setBillingItem(BillingItem billingItem) {
-        this.billingItem = billingItem;
+    public void setBillingItems(ArrayList<BillingItem> billingItems) {
+        this.billingItems = billingItems;
     }
 
     @Override
@@ -55,7 +60,7 @@ public class Voyage {
                 "channel='" + channel + '\'' +
                 ", eventCode='" + eventCode + '\'' +
                 ", customer=" + customer +
-                ", billingItem=" + billingItem +
+                ", billingItem=" + billingItems +
                 '}';
     }
 }
